@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n1, n2, i, count;
+
+    printf("Enter the first number: ");
+    scanf("%d", &n1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &n2);
+
+    count = 0;
+    for (i = n1; i <= n2; i++) {
+        if (i % 2 != 0) {  // check if i is odd
+            count++;   // increment the counter
+            if (count != 3) {  // skip the third number
+                printf("%d ", i);  // print the odd number (without newline)
+            } else {
+                count = 0;   // reset the counter for the next group of 2 numbers
+            }
+        }
+    }
+
+    printf("\n");   // print a newline character to separate the output
+
+    return 0;
+}
